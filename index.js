@@ -26,6 +26,7 @@ app.use(express.static('public', {
         }
     },
 }));
+app.use('/assets', express.static('public/assets'));
 
 // Read and parse body
 app.use(express.json());

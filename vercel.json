@@ -14,8 +14,10 @@
         {
             "src": "/public/.*\\.js",
             "headers": {
-                "Content-Type": "application/javascript"
+                "key": "Content-Type",
+                "value": "application/javascript"
             }
+            
         }
     ]
 }
