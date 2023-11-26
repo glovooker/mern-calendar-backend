@@ -20,13 +20,7 @@ app.use(cors(corsOptions));
 
 // Public directory
 app.use(express.static('public'));
-app.use('/assets', express.static('public/assets', {
-    setHeaders: (res, path, stat) => {
-        if (path.endsWith(".js")) {
-            res.setHeader("Content-Type", "application/javascript");
-        }
-    },
-}));
+app.use('/assets', express.static('public/assets'));
 
 // Read and parse body
 app.use(express.json());
