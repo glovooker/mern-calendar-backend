@@ -19,7 +19,13 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Public directory
-app.use(express.static('public'));
+app.use(express.static('public', {
+    setHeaders: (res, path, stat) => {
+        if (path.endsWith(".js")) {
+            res.setHeader("Content-Type", "application/javascript");
+        }
+    },
+}));
 
 // Read and parse body
 app.use(express.json());
