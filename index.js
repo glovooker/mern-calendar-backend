@@ -20,7 +20,6 @@ app.use(cors(corsOptions));
 
 // Public directory
 app.use(express.static('public'));
-app.use(express.static('public/assets'));
 
 // Read and parse body
 app.use(express.json());
