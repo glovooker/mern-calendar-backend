@@ -10,14 +10,17 @@
         {
             "src": "/(.*)",
             "dest": "index.js"
-        },
-        {
-            "src": "/public/.*\\.js",
-            "headers": {
-                "key": "Content-Type",
-                "value": "application/javascript"
-            }
-            
         }
-    ]
+    ],
+    "headers": [
+        {
+          "source": "/public/(.*\\.js)",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/javascript"
+            }
+          ]
+        }
+      ]
 }
