@@ -11,9 +11,9 @@ dbConnection();
 
 // CORS configuration
 const corsOptions = {
-    origin: 'http://127.0.0.1:5173', // Replace with your localhost port if different
+    origin: ['http://127.0.0.1:5173', 'http://localhost:3000'], // Add other domains as needed
     optionsSuccessStatus: 200 // For legacy browser support
-};
+  };
 
 // CORS
 app.use(cors(corsOptions));
