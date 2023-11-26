@@ -11,7 +11,7 @@ dbConnection();
 
 // CORS configuration
 const corsOptions = {
-    origin: ['http://127.0.0.1:5173', 'http://localhost:3000'], // Add other domains as needed
+    origin: ['http://127.0.0.1:5173', 'http://localhost:3000', 'https://mern-calendar-gamma.vercel.app'], // Add other domains as needed
     optionsSuccessStatus: 200 // For legacy browser support
   };
 
