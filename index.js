@@ -9,8 +9,14 @@ const app = express();
 // Database
 dbConnection();
 
+// CORS configuration
+const corsOptions = {
+    origin: 'http://127.0.0.1:5173', // Replace with your localhost port if different
+    optionsSuccessStatus: 200 // For legacy browser support
+};
+
 // CORS
-app.use(cors());
+app.use(cors(corsOptions));
 
 // Public directory
 app.use(express.static('public'));
